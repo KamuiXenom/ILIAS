@@ -1,7 +1,7 @@
 /* Copyright (c) 1998-2015 ILIAS open source eLearning e.V., Extended GPL, see docs/LICENSE */
 /**
 * ILIAS language file
-* @author 5.0.x 2015-08-06 Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>
+* @author 5.0.x 2015-11-11 Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>
 * @author 4.2.2	Berecz Antónia <berecz@gdf.hu>
 * @module		language file Hungarian
 * @modulegroup	language
@@ -1006,6 +1006,7 @@ assessment#:#tst_password_form#:#Adja meg a tesztjelszót
 assessment#:#tst_password#:#Tesztjelszó
 assessment#:#tst_percent_solved#:#Megválaszoltak százaléka
 assessment#:#tst_position#:#%s / %s kérdés
+assessment#:#tst_position_without_total#:#%s. kérdés
 assessment#:#tst_postpone_description#:#A résztvevők elhalaszthatják kérdéseket a teszt végére.
 assessment#:#tst_postpone#:#Kérdések elhalasztása
 assessment#:#tst_print_date#:#Nyomtatási dátum
@@ -3390,7 +3391,7 @@ common#:#msg_obj_exists_in_folder#:#A(z) %s objektum már benne van a(z) %s mapp
 common#:#msg_obj_exists#:#Ez az objektum már létezik ebben a mappában
 common#:#msg_obj_may_not_contain_objects_of_type#:#A(z) %s objektum nem tartalmazhat ilyen típusú objektumokat: %s.
 common#:#msg_obj_modified#:#Módosítások mentése sikerült.
-common#:#msg_obj_no_link#:#linkelése nem engedélyezett
+common#:#msg_obj_no_link#:#Technika okok miatt tároló objektumok (kategória, kurzus, csoport, illetve mappa) linkelése nem lehetséges. Linkelni tudja az abban lévő objektumokat vagy használjon kategória-, illetve kurzuslink objektumot.
 common#:#msg_obj_not_deletable_sold#:#A fizetést már aktiválták az alábbi objektumokhoz. Az objektumok nem törölhetők.
 common#:#msg_paste_object_not_in_itself#:#Nem lehet beilleszteni a(z) %s objektumot saját magába.
 common#:#msg_perm_adopted_from_itself#:#Nem alkalmazhat jogosultsági beállításokat magából a jelenlegi szerepből/szerepmintából.
@@ -5889,7 +5890,7 @@ crs#:#crs_unblocked_member_body#:#ezúton tájékoztatjuk, hogy '%s' kurzushozz�
 crs#:#crs_unblocked_member#:#'%s' kurzushoz hozzáférés
 crs#:#crs_unblocked#:#Nincs korlátozva a belépés
 crs#:#crs_unlimited#:#Nem korlátozott
-crs#:#crs_unsubscribe_member_body#:#'%s' kurzusról tagságát sikeresen töröltük.
+crs#:#crs_unsubscribe_member_body#:#ezúton tájékoztatjuk, hogy '%s' kurzusról tagságát sikeresen töröltük.
 crs#:#crs_unsubscribe_member#:#'%s' kurzustagság törlése
 crs#:#crs_unsubscribe_sure#:#Biztos, hogy lejelentkezik erről a kurzusról?
 crs#:#crs_unsubscribed_from_crs#:#Sikeresen lejelentkezett a kurzusról.
@@ -6192,7 +6193,7 @@ dateplaner#:#changeTo#:#Mire változik:
 dateplaner#:#checkforfreetime#:#Szabad időpont keresése:
 dateplaner#:#created#:#Létrehozva
 dateplaner#:#crs_cal_activation_end#:#Kurzus vége
-dateplaner#:#crs_cal_activation_start#:#Kurzusindítás
+dateplaner#:#crs_cal_activation_start#:#Kurzus kezdete
 dateplaner#:#crs_cal_reg_end#:#Regisztráció vége
 dateplaner#:#crs_cal_reg_start#:#Regisztráció kezdete
 dateplaner#:#date_format_middle#:#m/d/y
@@ -6644,12 +6645,10 @@ form#:#form_retype_password#:#Új jelszó megerősítése
 form#:#form_seconds#:#Másodperc
 forum#:#activate_current_and_childs#:#Összes hozzászólás jóváhagyása
 forum#:#activate_new_posts#:#Hozzászólások jóváhagyása
-forum#:#activate_only_current#:#Jelenlegi jóváhagyása
-forum#:#activate_post_txt#:#Biztos, hogy jóváhagyja a jelenlegi hozzászólást, és így az ahhoz fűzött esetleges hozzászólásokat is? Vegye figyelembe, hogy ezzel minden olyan hozzászólást is jóváhagy, amelyre ez válasz volt.
+forum#:#activate_only_current#:#Hozzászólás jóváhagyása
+forum#:#activate_post_txt#:#Biztos, hogy jóváhagyja a jelenlegi hozzászólást?
 forum#:#activate_post#:#Jóváhagyás
 forum#:#close_topics#:#Lezárás
-forum#:#deactivate_current_and_childs#:#Összes hozzászólás inaktiválása
-forum#:#deactivate_post_txt#:#Biztos, hogy inaktiválja a jelenlegi hozzászólást, és így az ahhoz fűzött esetleges hozzászólásokat is?
 forum#:#fmr_copy_threads_info#:#Lehetősége van egyszerű hozzászólások másolására. Csak a kiválasztott hozzászólások kezdete lesz megkétszerezve.
 forum#:#forum_add_quote#:#Előző hozzászólás beillesztése
 forum#:#forums_all_threads_marked_read#:#Az összes hozzászólást olvasottként jelölte meg.
@@ -9251,7 +9250,7 @@ survey#:#apply#:#Alkalmaz
 survey#:#arithmetic_mean#:#Számtani átlag
 survey#:#ask_insert_questionblocks#:#Biztos, hogy beilleszti az alábbi kérdésblokk(oka)t a kérdőívbe?
 survey#:#ask_insert_questions#:#Biztos, hogy beilleszti az alábbi kérdés(eke)t a kérdőívbe?
-survey#:#back#:#<< Vissza
+survey#:#back#:#Vissza
 survey#:#before#:#mi előtt
 survey#:#browse_for_questions#:#Hozzáadás kérdésgyűjteményből
 survey#:#cancel_survey#:#Kérdőív kitöltésének felfüggesztése
@@ -12540,6 +12539,7 @@ dcl#:#dcl_edit_type#:#Típus szerkesztése
 dcl#:#dcl_activate_rating#:#Értékelési bejegyzés bekapcsolása
 dcl#:#dcl_activate_approval#:#Bejegyzés jóváhagyásának bekapcsolása
 dcl#:#dcl_activate_notification#:#Értesítés bekapcsolása
+dcl#:#dcl_allowed_file_types#:#Engedélyezett fájltípusok
 dcl#:#dcl_table_id#:#Tábla ID
 dcl#:#dcl_add_new_record#:#Új bejegyzés létrehozása
 dcl#:#dcl_list_fields#:#Mezők
@@ -12833,6 +12833,7 @@ dcl#:#dcl_notification_deactivate_dcl#:#Értesítés kikapcsolása adatgyűjtés
 dcl#:#dcl_notification_activated#:#Értesítés bekapcsolva
 dcl#:#dcl_notification_deactivated#:#Értesítés kikapcsolva
 dcl#:#dcl_locked#:#Zárolható
+dcl#:#dcl_locked_tooltip#:#Tiltsa le a mezőt, hogy a felhasználók ne szerkeszthessék. Ez nincs hatással a 'Beállítások módosítása' joggal bíró szerepekre. 
 dcl#:#dcl_table_settings#:#Táblabeállítások
 dcl#:#dcl_add_perm#:#A felhasználó felvehet rekordokat
 dcl#:#dcl_edit_perm#:#A felhasználó szerkeszthet rekordokat
@@ -12983,7 +12984,7 @@ content#:#cont_credit_mode_info#:#Ez a beállítás csak akkor él, ha a leckem�
 content#:#cont_sc_auto_review_info_12#:#A leckemód váltson 'áttekintés'-re, amikor a tanuló befejezi az SCO-t.
 content#:#cont_sc_usession_info#:#Ez a beállítás periodikusan kéréseket küld a szervernek, hogy aktívan tartsa a munkamenetet.
 content#:#cont_sequencing_info#:#A tananyagban definiált szekvencia és navigálás engedélyezése.
-content#:#cont_time_from_lms_info#:#A tanulási modul ILIAS-nak küldött értékeinek szigorú ellenőrzése (a SCORM standard szerint).
+content#:#cont_time_from_lms_info#:#A SCORM-tananyag gyakran hibás adatokat ad vissza a feldolgozási idővel kapcsolatban. Ennek elkerülés érdekében - a szigorú SCORM-szabványokat betartva - az ILIAS állapítja meg a feldolgozási időt.
 survey#:#survey_question_pool_usage_active#:#Kérdésgyűjtemények használata
 survey#:#survey_question_pool_usage_active_info#:#A kérdések felvehetőek kérdésgyűjteménybe, így a kérdések felhasználhatók más kérdőívekben is.
 survey#:#survey_question_pool_usage_inactive#:#A kérdések közvetlenül a kérdőívben jöttek létre
@@ -13152,7 +13153,7 @@ blog#:#blog_toggle_draft_admin#:#Blog hozzászólások tiltása
 blog#:#blog_keywords_info#:#Használd a +/- ikonokat a kulcsszavak hozzáadásra, illetve eltávolítására.
 forum#:#merge#:#Összevon
 forum#:#please_choose_target#:#Válasszon témát, melyhez hozzáfűzzük.
-forum#:#frm_sure_merge_threads#:#Biztos, hogy összevonja a témákat? Figyelmeztetés: A folyamat nem visszafordítható! Az ILIAS felcseréli a kijelölt és cél témát, ha a kijelölt téma első bejegyzése korábban jött létre, mint a cél téma első bejegyzése.
+forum#:#frm_sure_merge_threads#:#Biztos, hogy összevonja a témákat? Figyelmeztetés: A folyamat vissza nem fordítható.
 forum#:#not_allowed_to_merge_into_another_forum#:#Különböző fórumok témái nem lehet összevonni.
 forum#:#frm_selected_merge_src#:#Összevonásra kijelölt téma: %s
 forum#:#error_same_thread_ids#:#A kijelölt és a cél témának különböznie kell.
@@ -13447,8 +13448,8 @@ survey#:#survey_reminder_frequency_days#:#Nap
 survey#:#survey_notification_target_group#:#Célcsoport
 survey#:#survey_notification_target_group_parent_course#:#Szülőkurzus/-csoport összes tagja
 survey#:#survey_notification_target_group_parent_course_inactive#:#Nem adott meg szülőkurzust/-csoport - emlékeztetőket nem küldünk!
-survey#:#survey_notification_target_group_invited#:#Összes meghívott felhasználó
-survey#:#survey_notification_target_group_invited_info#:#Jelenleg meghívott felhasználók: %s
+survey#:#survey_notification_target_group_invited#:#Összes olyan felhasználó, akinek asztalára a kérdőívet elhelyezték
+survey#:#survey_notification_target_group_invited_info#:#Jelenlegi felhasználók száma: %s
 survey#:#survey_notification_tutor_setting#:#Egy e-mail küldése, miután az összes résztvevő befejezte a kérdőív kitöltését
 survey#:#survey_notification_tutor_recipients#:#Tutorok (Bejelentkezés[ek])
 survey#:#survey_notification_tutor_recipients_invalid#:#Kérem adjon írási jogosultságot a felhasználók számára.
@@ -13824,8 +13825,13 @@ dcl#:#fieldtitle_allow_chars#:#Megengedett karakterek: %s
 dcl#:#add_value#:#Új bejegyzés hozzáadása
 common#:#objs_orgu#:#Szervezeti egységek
 common#:#obj_orgu#:#Szervezeti egység
+common#:#obj_orgu_description#:#Szervezeti felépítés létrehozása és módosítása
+common#:#il_orgu_superior#:#Felettes
+common#:#il_orgu_employee#:#Beosztott
+common#:#view_learning_progress#:#Tanulási haladás megjelenítése
+common#:#view_learning_progress_rec#:#Egység és alegységei Tanulási haladásának megjelenítése
 orgu#:#view_learning_progress#:#Tanulási haladás megjelenítése
-orgu#:#il_orgu_employee#:#Alkalmazott
+orgu#:#il_orgu_employee#:#Beosztott
 orgu#:#orgu_staff_deassign#:#Biztos, hogy eltávolítja a felhasználókat a mintából?
 orgu#:#deassign_user_successful#:#Felhasználó sikeresen eltávolítva a csoportból.
 orgu#:#il_orgu_superior#:#Felettes
@@ -13834,13 +13840,13 @@ orgu#:#orgu_msg_info_paste#:#Válassza ki a helyet, ahová az objektumot be kív
 orgu#:#orgu_view_learning_progress_rec#:#Tanulási haladás objektumainak rekurzív megjelenítése
 orgu#:#Staff#:#Személyi állomány
 orgu#:#orgu_edit#:#Szerkeszt
-orgu#:#employee#:#Alkalmazott
+orgu#:#employee#:#Beosztott
 orgu#:#superior#:#Felettes
 orgu#:#Actions#:#Műveletek
 orgu#:#show_learning_progress#:#Tanulási haladás megjelenítése
 orgu#:#users_successfuly_added#:#Felhasználó sikeresen hozzáadva.
 orgu#:#change_to_superior#:#Legyen felettes
-orgu#:#change_to_employee#:#Legyen alkalmazott
+orgu#:#change_to_employee#:#Legyen beosztott
 orgu#:#user_changed_successful#:#Változtatás sikeresen megtörtént.
 orgu#:#ou_id_type_not_valid#:#Az ou_id típusa nem érvényes. Érvényes típusok: 'reference_id' vagy 'external_id'.
 orgu#:#ou_parent_id_not_valid#:#Az ou_parent_id nem található.
@@ -13854,8 +13860,8 @@ orgu#:#orgu_add#:#Szervezeti egység hozzáadása
 orgu#:#orgu_import#:#Szervezeti egység importálása
 orgu#:#orgu_copy#:#Szervezeti egység másolása
 orgu#:#obj_orgu_duplicate#:#Szervezeti egység duplikálása
-orgu#:#local_staff#:#%s alkalmazottjai
-orgu#:#rec_staff#:#%s alkalmazottjai rekurzívan
+orgu#:#local_staff#:#%s beosztottjai
+orgu#:#rec_staff#:#%s beosztottjai rekurzívan
 orgu#:#placeholder#:#...
 orgu#:#simple_import#:#Egyszerű XML Import
 orgu#:#simple_xml#:#Egyszerű XML Export
@@ -14332,7 +14338,7 @@ wiki#:#wiki_rate_overall#:#Wiki értékelése
 content#:#lm_rating#:#Tananyag értékelése
 rating#:#rating_remove#:#Értékelés eltávolítása
 content#:#lm_rate_page#:#Oldal értékelése
-rbac#:#il_orgu_employee#:#Szervezeti egység alkalmazottja
+rbac#:#il_orgu_employee#:#Szervezeti egység beosztottja
 rbac#:#il_orgu_superior#:#Szervezeti egység felettese
 obj#:#obj_tool_setting_info_tab_info#:#Az 'Információ' fül látszódjon.
 common#:#obj_tool_setting_news_info#:#A 'Hír' blokk megjelenik a 'Tartalom' fül alatt.
@@ -14507,6 +14513,8 @@ rbac#:#orgu_read_users#:#A felhasználó láthatja a helyi ILIAS-fiókokat ebben
 rbac#:#orgu_cat_administrate_users#:#A felhasználó létrehozhat és helyi ILIAS-fiókokat kezelhet ebben a Szervezeti egységben
 rbac#:#orgu_delete#:#A felhasználó mozgathatja és törölheti a Szervezeti egységet
 rbac#:#orgu_edit_permission#:#A felhasználó megváltoztathatja a jogosultsági beállításokat
+rbac#:#orgu_copy#:#Szervezeti egység másolása
+rbac#:#orgu_view_learning_progress_rec#:#Egység és alegységei Tanulási haladásának megjelenítése
 rbac#:#rbac_create_orgu#:#Szervezeti egységek létrehozása
 book#:#book_post_booking_text_info#:#Használja a [PERIOD] és az [OBJECT] foglalási adatokat a szövegben.
 blog#:#blog_abstract_shorten#:#Absztrakt rövidítése
@@ -14783,12 +14791,12 @@ content#:#cont_reset_nr_of_tries#:#Próbálkozások számának alapértelmezettr
 content#:#cont_unlock_allow_continue#:#Feloldás / Folytatás engedélyezése###XXX
 crs#:#crs_subscription_failed_limit#:#A maximális felhasználószámot elérte.
 user#:#send_mail_to_inactive_users#:#Figyelmeztető e-mail
-user#:#send_mail_to_inactive_users_desc#:#Ha be van kapcsolva, az ILIAS-fiók annak inaktivitása miatti törlése előtt figyelmeztető e-mailt küldünk a közelgő törlésről.
+user#:#send_mail_to_inactive_users_desc#:#Ha be van kapcsolva, az ILIAS-fiók annak inaktivitása miatti törlése előtt figyelmeztető levelet küldünk a közelgő törlésről. Kérjük ellenőrizze, hogy külső címre levél küldése lehetséges. Aktiválás utáni emlékeztető levelet küldő ütemezett feladatnál előfordulhat, hogy az emlékeztető levél és a törlés közötti időköz kisebb, mint a beállított időköz.  
 user#:#send_mail_to_inactive_users_suffix#:#nap a törlés előtti.
 user#:#send_mail_to_inactive_users_numbers_only#:#Csak pozitív egész szám lehet.
 user#:#send_mail_to_inactive_users_must_be_smaller_than#:#Kisebb kell hogy legyen, mint az 'Utolsó bejelentkezés óta eltelt napok száma'.
 user#:#del_mail_subject#:#[ILIAS] – ILIAS-fiókját hamarosan töröljük
-user#:#del_mail_body#:#Tisztelt %1$s, %2$s régóta nem jelentkezett be ide %3$s. ILIAS-fiókját %4$s napon múlva töröljük. A törlés megakadályozása érdekében jelentkezzen be.
+user#:#del_mail_body#:#Tisztelt %1$s, %2$s régóta nem jelentkezett be (%3$s). Ha %4$s napon belül nem jelentkezik be, ILIAS-fiókját töröljük.
 user#:#delete_inactive_user_accounts_frequency#:#Gyakoriság
 user#:#delete_inactive_user_accounts_frequency_desc#:#A törlés és az e-mail küldés gyakorisága.
 user#:#send_mail_reminder_window_too_small#:#A 'Gyakoriság' értéke túl nagy.
@@ -15132,7 +15140,7 @@ survey#:#survey_access_codes_info#:#A felhasználók az 'Információ' fülön m
 survey#:#survey_results_anonymization#:#Titoktartás
 survey#:#survey_results_personalized#:#Nevekkel
 survey#:#survey_results_personalized_info#:#A résztvevők neve és válaszaik a 'Végeredmény' fülön jelennek meg. Akiknek hozzáférésük van ehhez a fülhöz, azonosíthatják a válaszadókat. 
-survey#:#survey_results_anonymized#:#Nevek nélkül
+survey#:#survey_results_anonymized#:#Nevek nélkül / Anonimizált kérdőív
 survey#:#survey_results_anonymized_info#:#'Végeredmény' fülön a résztvevők neve helyett kódja jelenik meg. Akiknek hozzáférésük van ehhez a fülhöz, azok sem köthetik a válaszokat válaszadóikhoz, csak például az 'iTXaF' kérdőívkódú felhasználóhoz.
 survey#:#material_added_empty#:#Az objektum nem tartalmaz megfelelő segédanyagot.
 ecs#:#ecs_refresh_participants#:#Refresh ECS-résztvevők
@@ -15207,8 +15215,6 @@ mob#:#mob_object#:#Objektum
 content#:#cont_qtries_info#:#Újonnan létrehozott kérdések esetén a próbálkozások számának alapértelmezett értéke.
 lm#:#lm_copy#:#Tananyag másolása
 content#:#cont_settings#:#Tananyag beállításai
-rbac#:#orgu_view_learning_progress_rec#:#Egység és alegységei Tanulási haladásának megjelenítése
-rbac#:#orgu_copy#:#Szervezeti egység másolása
 exc#:#exc_no_team_yet_notice#:#Még egy csapathoz sincs hozzárendelve!
 prtf#:#prtf_edit_embedded_blog#:#'%s' blog szerkesztése
 exc#:#exc_manage_team#:#Csapat kezelése
@@ -15290,3 +15296,19 @@ sysc#:#sysc_task_tree_missing_reference#:#Hiányzó objektumhivatkozások
 sysc#:#sysc_task_tree_missing_reference_desc#:#Hiányzó objektumhivatkozások keresése és javítása a Taneszköztároló-fában.
 sysc#:#sysc_task_structure#:#Fastruktúra
 sysc#:#sysc_task_structure_desc#:#Taneszköztároló-fa szerkezetének elemzése és javítása.
+blog#:#blog_keywords_other#:#További kulcsszavak
+blog#:#blog_keywords_other_info#:#Ezeket a kulcsszavakat másik blogbejegyzésekhez állította be.
+forum#:#forums_thread_deleted#:#A kiválasztott témát annak összes hozzászólásával sikeren törölte.
+forum#:#forums_threads_deleted#:#A kiválasztott témákat azok összes hozzászólásával sikeren törölte.
+user#:#feedhash#:#Hírcsatorna-hash
+wsp#:#wsp_shared_filter_reset_button#:#Keresés feltételek törlése
+wsp#:#wsp_shared_filter_button#:#Keresés
+exc#:#exc_direct_submit#:#Jóváhagyás
+export#:#no_file#:#Nincs fájl
+content#:#lm_no_download_files#:#Jelenleg nem áll rendelkezésre letölthető fájl.
+rbac#:#feed_copy#:#A felhasználó másolhat webhírforrást
+crs#:#crs_unsubscribe_member_explanation#:#Azért kapta ezt a levelet, mert leiratkozott a fentebb említett kurzusról.
+content#:#cont_sqst#:#Kérdőívkérdés (segédanyag)
+mmbr#:#info_refuse_sure#:#Biztos, hogy elutasítja az alábbi felhasználó(k)at?
+administration#:#adm_user_starting_point_inherit#:#Általános beállítások használata
+administration#:#adm_user_starting_point_inherit_info#:#A rendszergazda összes beállításának használata a rendszerre.
