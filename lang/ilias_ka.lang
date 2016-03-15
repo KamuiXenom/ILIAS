@@ -3492,7 +3492,6 @@ common#:#message_content#:#შეტყობინების შინაა�
 common#:#message_no_delivered_files#:#თქვენ ჯერ არ ჩაგიბარებიათ ფაილები
 common#:#message_to#:#შეტყობინება ვის:
 common#:#meta_data#:#მეტა მონაცემები
-common#:#mgs_objects_linked_to_the_following_folders#:#ეს ობიექტი დაკავშირებული შემდეგ ფოლდერთან
 common#:#migrate#:#გადატანა
 common#:#min_time#:#მინიმალური დრო
 common#:#minute#:#წუთი
@@ -3568,7 +3567,6 @@ common#:#msg_input_is_required#:#ეს შენატანი მოთხო
 common#:#msg_invalid_filetype#:#არასწორი ფაილის სახეობა
 common#:#msg_is_last_role#:#თქვენ ამოშალეთ ბოლო გლობალური პასუხისმგებლობა შემდეგი მომხმარებლებისგან
 common#:#msg_last_role_for_registration#:#სულ მცირე ერთი პასუხისმგებლობაა შესაძლებელი  რეგისტრაციის ფორმაში ახალი მომხმარებლებისთვის. ამჟამად მხოლოდ ეს პასუხისმგებლობაა შესაძლებელი
-common#:#msg_link_clipboard#:#ახლა, გთხოვთ აირჩიოთ სასურველი ადგილი, სადაც აღნიშნული ობიექტები დაკავშირებული იქნება და დააჭირეთ ღილაკს ,,ასლის ჩასმა"
 common#:#msg_linked#:#მონიშნული ობიექტები დაკავშირებულია
 common#:#msg_may_not_contain#:#ეს ობიექტი შეიძლება არ შეიცავდეს ამ სახეობის ობიექტებს
 common#:#msg_min_one_active_role#:#თითოეული მომხმარებელს აქვს სულ მცირე ერთი გლობალური პასუხისმგებლობა!
@@ -6527,7 +6525,6 @@ crs#:#event_location#:#ადგილი
 crs#:#event_materials#:#სესიის მასალები
 crs#:#event_not_participated#:#არ მიუღია მონაწილეობა
 crs#:#event_overview#:#სესიებში მონაწილეობა
-crs#:#event_participant_selection#:#მონაწილის მონიშვნა
 crs#:#event_participated#:#მონაწილეობა მიიღო
 crs#:#event_participation#:#მონაწილეობა
 crs#:#event_register#:#დარეგისტრირდით
@@ -6541,12 +6538,9 @@ crs#:#event_select_one#:#გთხოვთ აირჩიოთ ერთი �
 crs#:#event_start_date#:#დაწყება
 crs#:#event_table_create#:#ახალი სესია
 crs#:#event_table_update#:#სესიის რედაქტირება
-crs#:#event_tbl_admins#:#ადმინისტრატორები
-crs#:#event_tbl_members#:#წევრები
 crs#:#event_tbl_participants#:#მონაწილეთა სია
 crs#:#event_tbl_participated#:#მონაწილეობა მიიღო
 crs#:#event_tbl_registered#:#დარეგისტრირებულია
-crs#:#event_tbl_tutors#:#მასწავლებლები
 crs#:#event_time#:#დრო
 crs#:#event_title#:#დასახელება
 crs#:#event_tutor_data#:#ინფორმაცია ლექტორის შესახებ
@@ -14048,7 +14042,6 @@ content#:#cont_language#:#Language###30 12 2013 new variable
 content#:#cont_add_lang#:#Add Language###30 12 2013 new variable
 content#:#cont_conf_delete_lang#:#Do you really want to drop support for the following languages?###30 12 2013 new variable
 content#:#cont_back_to_page#:#Back to Page###30 12 2013 new variable
-content#:#cont_got_lock#:#This page has been locked for your editing. Please release the page after you have done all your changes.###30 12 2013 new variable
 content#:#cont_finish_editing#:#Finish Editing###30 12 2013 new variable
 content#:#cont_page_lock_released#:#Editing finished. Page lock has been released.###30 12 2013 new variable
 assessment#:#preserve_manscoring#:#Preserve manual scorings###04 01 2014 new variable
@@ -16151,3 +16144,37 @@ rbac#:#awra_edit_permission#:#User can change permission settings in ‘Who is o
 rbac#:#svy_read_learning_progress#:#User can view learning progress of other users###23 12 2015 new variable
 rbac#:#svy_edit_learning_progress#:#User can edit learning progress settings###23 12 2015 new variable
 rbac#:#sess_edit_learning_progress#:#User can edit learning progress settings###23 12 2015 new variable
+assessment#:#tst_objectives_progress_header#:#Learning Objectives Progress###21 01 2016 new variable
+assessment#:#tst_objective_progress_header#:#Learning Objective Progress###21 01 2016 new variable
+content#:#cont_got_lock_until#:#This page has been locked for your editing until %1. Please release the page after you have done all your changes by hitting %2###21 01 2016 new variable
+crs#:#event_user_selection_include_role#:# Include all users with role "%1$s"###21 01 2016 new variable
+crs#:#event_user_selection_include_waiting_list#:#Include all users on "Waiting List"###21 01 2016 new variable
+crs#:#event_user_selection_include_requests#:#Include all users on list "Join Requests"###21 01 2016 new variable
+crs#:#event_user_selection_include_filter#:#Include "%1$s"###21 01 2016 new variable
+crs#:#event_user_selection#:#Selection of Users###21 01 2016 new variable
+crs#:#event_tbl_admin#:#Administrator###21 01 2016 new variable
+crs#:#event_tbl_member#:#Member###21 01 2016 new variable
+crs#:#event_tbl_tutor#:#Tutor###21 01 2016 new variable
+news#:#news_sorry_not_accessible_anymore#:#Sorry, this item is not accessible anymore.###21 01 2016 new variable
+note#:#note_comment_notification_reason#:#You receive this message because your account is listed as a global recipient for all comments in the ILIAS administration (Personal Desktop settings).###21 01 2016 new variable
+note#:#note_comment_notification_user_has_written#:#%s has written:###21 01 2016 new variable
+prg#:#prg_show_programmes#:#Visibility###21 01 2016 new variable
+content#:#cont_not_saved_edit_lock_expired#:#Sorry, but another user obtained the edit lock for this page in the meantime. You may close this message and copy the content to your clipboard.###21 01 2016 new variable
+content#:#cont_error#:#An Error Occured###21 01 2016 new variable
+common#:#mgs_objects_linked_to_the_following_folders_p#:#The objects were linked to the following folder(s): %s###26 01 2016 new variable
+common#:#mgs_objects_linked_to_the_following_folders_s#:#The object was linked to the following folder(s): %s###26 01 2016 new variable
+common#:#msg_link_clipboard_p#:#Now, please select the desired location, where the selected objects should be linked to and click the button Paste.###26 01 2016 new variable
+common#:#msg_link_clipboard_s#:#Now, please select the desired location, where the selected object should be linked to and click the button Paste.###26 01 2016 new variable
+wsp#:#wsp_permission_all_pw_info#:#After providing the password this object is visible for all users of the internet.###26 01 2016 new variable
+crs#:#crs_mail_context_member_info#:#For the contact emails on the info screen of a course ###26 01 2016 new variable
+crs#:#crs_mail_context_tutor_info#:#For the participant emails on the member and learning progress screens of a course###26 01 2016 new variable
+sahs#:#sahs_mail_context_lp_info#:#For the participant emails on the learning progress screens of a scorm module###26 01 2016 new variable
+style#:#sty_type_ha_iheada#:#Hor. Accordion Header (active)###01 03 2016 new variable
+style#:#sty_type_ha_ihcap#:#Hor. Accordion Caption###01 03 2016 new variable
+style#:#sty_type_va_iheada#:#Vert. Accordion Header (active)###01 03 2016 new variable
+style#:#sty_type_va_ihcap#:#Vert. Accordion Caption###01 03 2016 new variable
+style#:#sty_ha_iheada_class#:#Hor. Accordion Header (active)###01 03 2016 new variable
+style#:#sty_ha_ihcap_class#:#Hor. Accordion Caption###01 03 2016 new variable
+style#:#sty_va_iheada_class#:#Vert. Accordion Header (active)###01 03 2016 new variable
+style#:#sty_va_ihcap_class#:#Vert. Accordion Caption###01 03 2016 new variable
+exc#:#exc_delete_team#:#Delete Team###10 03 2016 new variable

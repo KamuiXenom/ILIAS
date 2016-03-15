@@ -255,9 +255,9 @@ assessment#:#tst_pass_overview_header_lo_initial_per_objective#:#Initial Test Re
 assessment#:#tst_pass_overview_header_lo_qualifying_all_objectives#:#Qualifying Test Results<br />for the Learning Objectives within the Course %s
 assessment#:#tst_pass_overview_header_lo_qualifying_per_objective#:#Qualifying Test Results<br />for the Learning Objectives %s within the Course %s
 assessment#:#tst_pass_details_header_lo_initial#:#Initial Test Results for the Learning Objectives<br />%s - %s
-assessment#:#tst_virtual_pass_header_lo_initial#:#Initial Test Results for the Learning Objectives<br />%s
+assessment#:#tst_virtual_pass_header_lo_initial#:#Initial Test Results for the Learning Objective<br />%s
 assessment#:#tst_pass_details_header_lo_qualifying#:#Qualifying Test Results for the Learning Objectives<br />%s - %s
-assessment#:#tst_virtual_pass_header_lo_qualifying#:#Qualifying Test Results for the Learning Objectives<br />%s
+assessment#:#tst_virtual_pass_header_lo_qualifying#:#Qualifying Test Results for the Learning Objective<br />%s
 assessment#:#ass_create_export_file#:#Create Test Export File
 assessment#:#ass_create_export_test_results#:#Create Test Results Export File
 assessment#:#ass_create_export_test_archive#:#Create Test Archive File
@@ -265,6 +265,8 @@ assessment#:#ass_export_files#:#Export Files
 assessment#:#ass_file#:#File
 assessment#:#ass_question#:#Question
 assessment#:#ass_size#:#Size
+assessment#:#tst_objectives_progress_header#:#Learning Objectives Progress
+assessment#:#tst_objective_progress_header#:#Learning Objective Progress
 assessment#:#assClozeTest#:#Cloze Question
 assessment#:#assErrorText#:#Error Text
 assessment#:#assessment_eval_settings#:#Show the following fields in Evaluation for All Users
@@ -296,7 +298,7 @@ assessment#:#manual_editing#:#Manual Editing
 assessment#:#longmenu_text#:#Long Menu Text
 assessment#:#correct_answers#:#Correct Answers: 
 assessment#:#answer_options#:#Answer Options: 
-assessment#:#add_answers#:#Add Antworten 
+assessment#:#add_answers#:#Add answers 
 assessment#:#by#:#by
 assessment#:#cancel_test#:#Suspend the Test
 assessment#:#cannot_edit_marks#:#There are already learners who ran the test. You can only change the marks if a score reporting date is enabled and the reporting date is not yet reached.
@@ -385,7 +387,7 @@ assessment#:#ects_grade_c#:#generally sound work with a number of notable errors
 assessment#:#ects_grade_d_short#:#SATISFACTORY
 assessment#:#ects_grade_d#:#fair but with significant shortcomings
 assessment#:#ects_grade_e_short#:#SUFFICIENT
-assessment#:#ects_grade_e#:#performance meets the minimum criteria
+assessment#:#ects_grade_e#:#performance meets the minimum criterion
 assessment#:#ects_grade_f_short#:#FAIL
 assessment#:#ects_grade_f#:#considerable further work is required
 assessment#:#ects_grade_fx_short#:#FAIL
@@ -1362,9 +1364,9 @@ assessment#:#tst_user_finished_test#:#User finished test (%s)
 assessment#:#tst_your_answer_was#:#Your answer was
 assessment#:#tst_your_answers#:#These are your answers given to the following questions.
 assessment#:#test_enable_archiving#:#Enable Archiving
-assessment#:#test_enable_archiving_desc#:#In the ‘Export’-tab the whole test comprising all answers of all participants can be exported and downloaded.
-assessment#:#ass_create_archive_export#:#Create Archive-Export
-assessment#:#cannot_export_archive#:#Archive-Export cannot be created.
+assessment#:#test_enable_archiving_desc#:#In the ‘Export’-tab, the whole test comprising all answers of all participants can be exported and downloaded. The archive file is generated for every user when a test pass has been finished or when the results have been modified by manual scoring. This increases server load and reduces performance of the system.
+assessment#:#ass_create_archive_export#:#Create Archive Export
+assessment#:#cannot_export_archive#:#Archive export file cannot be created.
 assessment#:#tt_assessment#:#Assessment Test
 assessment#:#tt_online_exam#:#Online Exam
 assessment#:#tt_self_assessment#:#Self Assessment Test
@@ -3431,7 +3433,8 @@ common#:#message_no_delivered_files#:#You have not submitted any files.
 common#:#message_to#:#Message to:
 common#:#message#:#Message
 common#:#meta_data#:#Metadata
-common#:#mgs_objects_linked_to_the_following_folders#:#The object(s) was/were linked to the following folder(s): %s
+common#:#mgs_objects_linked_to_the_following_folders_p#:#The objects were linked to the following folder(s): %s
+common#:#mgs_objects_linked_to_the_following_folders_s#:#The object was linked to the following folder(s): %s
 common#:#migrate#:#Migrate
 common#:#min_time#:#Minimum time
 common#:#minute#:#Minute
@@ -3511,7 +3514,8 @@ common#:#msg_input_is_required#:#This input is required. Please enter a value.
 common#:#msg_invalid_filetype#:#Invalid file type
 common#:#msg_is_last_role#:#You removed the last global role from the following users
 common#:#msg_last_role_for_registration#:#At least one role must be available in the registration form for new users. This role is currently the only one available.
-common#:#msg_link_clipboard#:#Now, please select the desired location, where the selected objects should be linked to and click the button Paste.
+common#:#msg_link_clipboard_p#:#Now, please select the desired location, where the selected objects should be linked to and click the button Paste.
+common#:#msg_link_clipboard_s#:#Now, please select the desired location, where the selected object should be linked to and click the button Paste.
 common#:#msg_linked#:#Selected object(s) linked.
 common#:#msg_may_not_contain#:#This object may not contain objects of type:
 common#:#msg_min_one_active_role#:#Each user must have at least one active global role!
@@ -4709,7 +4713,7 @@ common#:#usr_agreement_empty#:#The agreement contains no text
 common#:#usr_agreement#:#User Agreement
 common#:#usr_edit#:#Edit User
 common#:#usr_filter_coursemember#:#Member of course
-common#:#usr_filter_empty_result#:#No users found that match the selected filter criteria
+common#:#usr_filter_empty_result#:#No users found that match the selected filter criterion
 common#:#usr_filter_groupmember#:#Member of group
 common#:#usr_filter_lastlogin#:#Last login of user
 common#:#usr_filter_role#:#Assigned role
@@ -6135,7 +6139,6 @@ crs#:#event_location#:#Location
 crs#:#event_materials#:#Session Materials
 crs#:#event_not_participated#:#Not Participated
 crs#:#event_overview#:#Participation in Sessions
-crs#:#event_participant_selection#:#Participant Selection
 crs#:#event_participated#:#Participated
 crs#:#event_participation#:#Participation
 crs#:#event_register#:#Register
@@ -6149,12 +6152,9 @@ crs#:#event_select_one#:#-- Please select one session --
 crs#:#event_start_date#:#Start
 crs#:#event_table_create#:#New Session
 crs#:#event_table_update#:#Edit Session
-crs#:#event_tbl_admins#:#Administrators
-crs#:#event_tbl_members#:#Members
 crs#:#event_tbl_participants#:#List of Participants
 crs#:#event_tbl_participated#:#Attended
 crs#:#event_tbl_registered#:#Registered
-crs#:#event_tbl_tutors#:#Tutors
 crs#:#event_time#:#Time
 crs#:#event_title#:#Title
 crs#:#event_tutor_data#:#Information About the Lecturer
@@ -7237,6 +7237,8 @@ mail#:#info_mail_external_sender_noreply#:#Please enter the e-mail that shall be
 mail#:#invite_to_chat#:#Invite to Chat
 mail#:#linebreak#:#Line break
 mail#:#mail_account_mail_check#:#Send Account Mail
+mail#:#mail_send_html#:#HTML Frame for External Emails
+mail#:#mail_send_html_info#:#If enabled, the body of external emails will be embedded in a HTML frame. The corresponding template can be customized by creating a copy of './Services/Mail/templates/default/tpl.html_mail_template.html' at './Customizing/global/skin/[SKIN]/Services/Mail/tpl.html_mail_template.html' .
 mail#:#mail_account_mail#:#Account Mail
 mail#:#mail_add_recipient#:#Please enter a recipient
 mail#:#mail_add_subfolder#:#Add Sub-folder
@@ -10959,8 +10961,8 @@ style#:#sty_to#:#To
 style#:#sty_add_content_style#:#Add Content Style
 style#:#sty_remove_global_default_state#:#Remove Global Default State
 style#:#sty_remove_global_fixed_state#:#Remove Global Fixed State
-style#:#sty_make_global_default#:#Set as Global Default Style for New Objects
-style#:#sty_make_global_fixed#:#Force this Style on New Objects
+style#:#sty_make_global_default#:#Set as default style
+style#:#sty_make_global_fixed#:#Force this style on all objects
 content#:#cont_save_types#:#Save Types
 content#:#cont_layout_template#:#Layout Template
 content#:#cont_special_page#:#Special Content Page
@@ -11326,7 +11328,8 @@ wsp#:#wsp_set_permission_registered#:#All Registered Users
 wsp#:#wsp_set_permission_all#:#World Wide Web
 wsp#:#wsp_remove_permission#:#Remove Permission
 wsp#:#wsp_permission_registered_info#:#This object is shared with all registered users.
-wsp#:#wsp_permission_all_info#:#This object has been published.
+wsp#:#wsp_permission_all_info#:#This object is visible for all users of the internet.
+wsp#:#wsp_permission_all_pw_info#:#After providing the password this object is visible for all users of the internet.
 style#:#sty_type_iim#:#Interactive Image Content Popup
 style#:#sty_type_marker#:#Interactive Image Marker
 style#:#sty_import_page_layout#:#Import Page Layout
@@ -11397,8 +11400,8 @@ ecs#:#ecs_server_addr#:#Server Address
 ecs#:#ecs_activate#:#Activate
 ecs#:#ecs_deactivate#:#Deactivate
 ecs#:#ecs_not_configured#:#Not configured
-administration#:#user_criteria#:#Unique user criteria
-administration#:#user_criteria_desc#:#Unique user criteria that is used for test results import/export. This is needed to identify identical users on different ILIAS systems.
+administration#:#user_criteria#:#Unique user criterion
+administration#:#user_criteria_desc#:#Unique user criterion that is used for test results import/export. This is needed to identify identical users on different ILIAS systems.
 assessment#:#imported#:#imported
 ecs#:#ecs_tbl_import#:#Import
 ecs#:#ecs_tbl_export#:#Export
@@ -11689,12 +11692,12 @@ notes#:#note_update_note#:#Update Note
 common#:#added_to_desktop#:#The item has been added to the desktop.
 common#:#removed_from_desktop#:#The item has been removed from the desktop.
 notes#:#notes_comments#:#Comments
-rbac#:#chtr_visible#:#Chatroom is visible
-rbac#:#chtr_read#:#User can join and participate at Chat Room
-rbac#:#chtr_write#:#User can edit settings of Chat Room and ban users
+rbac#:#chtr_visible#:#Chat Room is visible
+rbac#:#chtr_read#:#User can join and participate at chat room
+rbac#:#chtr_write#:#User can edit settings of chat room and ban users
 rbac#:#chtr_edit_permission#:#User can change Permission Settings for Chat Room
-common#:#objs_chtr#:#Chatrooms
-common#:#obj_chta#:#Chat
+common#:#objs_chtr#:#Chat Room
+common#:#obj_chta#:#Chat Room
 chatroom#:#history_by_day#:#Daily History
 chatroom#:#no_username_given#:#Please choose a username
 chatroom#:#history_by_session#:#Session History
@@ -11728,7 +11731,7 @@ chatroom#:#small#:#Small
 chatroom#:#large#:#Large
 chatroom#:#duration_from#:#From
 chatroom#:#duration_to#:#To
-chatroom#:#obj_chtr#:#Chatroom
+chatroom#:#obj_chtr#:#Chat Room
 chatroom#:#chat_message#:#Message
 chatroom#:#chat_message_to_all#:#To All
 chatroom#:#chat_message_options#:#Display
@@ -11753,7 +11756,7 @@ chatroom#:#chat_create_private_room_button#:#Create Private Room
 chatroom#:#moderate#:#Moderate
 chatroom#:#chatroom_smiley_keyword#:#Keyword
 chatroom#:#chat_invitation#:#"[INVITER_NAME]" invites you into chat room "[ROOM_NAME]"
-chatroom#:#chat_invitation_long#:#[SALUTATION]\n\nYou have been invited to a chat room:\nChat room Title: [ROOM_NAME]\nInvited by: [INVITER_NAME]\nURL: [LINK]\n\nTo join the chat room, please follow the given URL.
+chatroom#:#chat_invitation_long#:#[SALUTATION]\n\nYou have been invited to a chat room:\nChat Room Title: [ROOM_NAME]\nInvited by: [INVITER_NAME]\nURL: [LINK]\n\nTo join the chat room, please follow the given URL.
 chatroom#:#chat_invitation_short#:#Please click the title link to enter the chat room.
 chatroom#:#settings_title#:#Settings
 chatroom#:#history_byday_title#:#Show Conversation per Day
@@ -11799,7 +11802,7 @@ chatroom_adm#:#keystore#:#Keystore
 chatroom_adm#:#keypass#:#Keypass
 chatroom_adm#:#storepass#:#Storepass
 chatroom_adm#:#settings_has_been_saved#:#Settings has been saved
-common#:#obj_chtr#:#Chatroom
+common#:#obj_chtr#:#Chat Room
 chatroom#:#unable_to_connect#:#The connection to the chat server could not be established.
 user#:#user_account_codes#:#Account Reactivation Codes
 user#:#user_account_codes_add#:#Add Codes
@@ -12301,7 +12304,7 @@ blog#:#blog_notification_toggle_off#:#Deactivate Notification
 blog#:#blog_notification_activated#:#Notification Activated
 blog#:#blog_notification_deactivated#:#Notification Deactivated
 wiki#:#wiki_change_notification_page_body_comment#:#the following wiki page has been commented
-common#:#chta_visible#:#Chatroom Administration is visible
+common#:#chta_visible#:#Chat Room Administration is visible
 common#:#chta_read#:#Read access to Chat Room Administration
 common#:#chta_write#:#Edit Chat Room Administration
 common#:#chta_edit_permission#:#Change Permission Settings
@@ -13322,7 +13325,7 @@ tos#:#tos_no_documents_exist#:#Currently there are no terms of service for any o
 tos#:#tos_no_documents_exist_cant_save#:#Currently there are no terms of service for any of the installed languages. Please add at least one document for any of the installed languages.
 ecs#:#ecs_sync_trees#:#Synchronise Directory Trees
 survey#:#svy_invite_action#:#Put on Personal Desktop
-rbac#:#chtr_delete#:#User can move or delete course
+rbac#:#chtr_delete#:#User can move or delete chat room
 ecs#:#ecs_role_mappings#:#Course/Group Role Mappings
 ecs#:#ecs_role_mapping_value#:#Attribute Value
 forum#:#sorting_manual_sticky#:#Manual sorting of sticky threads 
@@ -14263,7 +14266,7 @@ search#:#search_user_search_info_form#:#Data in personal profiles of users is in
 adve#:#adve_blocking_mode#:#Edit Lock
 adve#:#adve_minutes#:#Minutes
 adve#:#adve_minutes_info#:#Minutes of inactivity before an edit lock expires and a page can be edited by another user.
-content#:#content_until#:#At least locked until: 
+content#:#content_until#:#At least locked until
 content#:#content_no_edit_lock#:#The page is currently locked by another user.
 exc#:#exc_fb_tutor_info#:#When a feedback file is uploaded, a notification is sent to the user and the feedback file will be listed in the user's assignment view.
 obj#:#svy_results#:#Results
@@ -14625,7 +14628,7 @@ content#:#cont_language#:#Language
 content#:#cont_add_lang#:#Add Language
 content#:#cont_conf_delete_lang#:#Do you really want to drop support for the following languages?
 content#:#cont_back_to_page#:#Back to Page
-content#:#cont_got_lock#:#This page has been locked for your editing. Please release the page after you have done all your changes.
+content#:#cont_got_lock_until#:#This page has been locked for your editing until %1. Please release the page after you have done all your changes by hitting %2
 content#:#cont_finish_editing#:#Finish Editing
 content#:#cont_page_lock_released#:#Editing finished. Page lock has been released.
 notes#:#note_content_removed#:#The content has been removed.
@@ -15482,7 +15485,7 @@ mail#:#only_inbox_trash_info#:#If enabled, emails are only deleted if they are l
 mail#:#mail_notify_orphaned#:#Notification Mail
 mail#:#mail_notify_orphaned_info#:#If you enter a value here is larger than or equal to 1, ILIAS will send an email to the user before an internal mail is deleted. Please make sure that an external e-mail reception is possible.
 mail#:#orphaned_mail_subject#:#Notification about orphaned mails
-mail#:#orphaned_mail_body#:#There are old or orphaned mails in the following mailboxes. Please note, that these mails will be deleted automatically soon.
+mail#:#orphaned_mail_body#:#The following old or orphaned mails are in your mailbox. Please note, that these mails will be deleted automatically soon.
 prtt#:#prtt_portfolio_created#:#Portfolio Template added
 forum#:#frm_censorship#:#Censor
 forum#:#frm_revoke_censorship#:#Revoke Censorship
@@ -15568,7 +15571,7 @@ membership#:#mem_force_notification_mode_all#:#Notification activated for all me
 membership#:#mem_force_notification_mode_all_sub_blocked#:#Members can deactivate notifications
 membership#:#mem_force_notification_mode_custom#:#Custom
 common#:#settings_for_all_members#:#Members will be notified automatically 
-common#:#settings_per_users#:#For each member individual settings can be made 
+common#:#settings_per_users#:#Members are notified automatically. Deactivating notifications can be allowed for each member individually.
 forum#:#user_decides_notification#:#Members have to manually activate notifications
 crs#:#crs_intro_course_group_notification_for#:#this is the news digest for your courses and groups, which have an active notification.
 crs#:#crs_intro_course_group_notification_index#:#There are news for the period of %1$s to %2$s for the following courses and groups:
@@ -15710,7 +15713,7 @@ crs#:#crs_subscription_min_members#:#Minimum Number
 crs#:#crs_subscription_min_members_info#:#Define the number of users that is minimally required for this course to be held at all. If this number is not met either after the date until which users can register or unsubscribe from the course a mail will be send to those course administrators or tutors that have activated the 'Notification' flag in the 'Members'-tab.
 crs#:#crs_waiting_list_no_autofill#:#Without Auto-Fill
 crs#:#crs_waiting_list_autofill#:#With Auto-Fill
-crs#:#crs_waiting_list_autofill_info#:#Participants are recruited from the waiting list automatically on cancellations.
+crs#:#crs_waiting_list_autofill_info#:#Participants are recruited from the waiting list automatically on cancellations. This should not be used with the "Request Membership" registration procedure as autofill will bypass it.
 crs#:#crs_cancellation_end#:#Limit 'Unsubscribe from Course'
 crs#:#crs_period#:#Course Period
 crs#:#crs_course_period_not_valid#:#The course period is not valid.
@@ -15731,12 +15734,12 @@ crs#:#mem_cron_min_members_subject#:#Course/Group: Minimum Members Check
 crs#:#mem_cron_min_members_intro#:#The following courses and groups do not meet the minimum number of members (yet).
 grp#:#grp_waiting_list_no_autofill#:#Without Auto-Fill
 grp#:#grp_waiting_list_autofill#:#With Auto-Fill
-grp#:#grp_waiting_list_autofill_info#:#Participants are recruited from the waiting list automatically on cancellations.
+grp#:#grp_waiting_list_autofill_info#:#Participants are recruited from the waiting list automatically on cancellations. This should not be used with the "Request Membership" registration procedure as autofill will bypass it.
 sess#:#sess_reg_waiting_list_none#:#None
 sess#:#sess_reg_waiting_list_no_autofill#:#Without Auto-Fill
 sess#:#sess_reg_waiting_list_no_autofill_info#:#If the maximum number of users is exceeded, new registrations will be placed on a waiting list.
 sess#:#sess_reg_waiting_list_autofill#:#With Auto-Fill
-sess#:#sess_reg_waiting_list_autofill_info#:#Participants are recruited from the waiting list automatically on cancellations.
+sess#:#sess_reg_waiting_list_autofill_info#:#Participants are recruited from the waiting list automatically on cancellations. This should not be used with the "Apply for Participation" registration procedure as autofill will bypass it.
 grp#:#grp_cancellation_end_info#:#Until the date selected members can unsubscribe from the group.
 crs#:#crs_cancellation_end_info#:#Until the date selected members can unsubscribe from the course.
 crs#:#crs_period_info#:#Information about the start and end date of the event, which is supported by the course
@@ -16029,8 +16032,8 @@ prg#:#prg_warning_img_alt#:#Warning!
 prg#:#prg_successful_img_alt#:#successful
 prg#:#prg_in_progress_img_alt#:#in progress
 prg#:#prg_progress_info#:#You have %1$d points. The Study Programme is completed with %2$d points.
-prg#:#prg_progress_status#:# %1$d of possible %2$d Points
-prg#:#prg_progress_status_with_child_sp#:# %1$d of %2$d Points
+prg#:#prg_progress_status#:# %1$d of %2$d Points
+prg#:#prg_progress_status_with_child_sp#:# %1$d of possible %2$d Points
 prg#:#prg_no_members_not_active#:#Can't add members, as this programme is not active.
 prg#:#prg_type_msg_missing_title#:#Title cannot be empty.
 prg#:#prg_added_member#:#The new member was added successfully.
@@ -16151,3 +16154,29 @@ rbac#:#awra_edit_permission#:#User can change permission settings in ‘Who is o
 rbac#:#svy_read_learning_progress#:#User can view learning progress of other users
 rbac#:#svy_edit_learning_progress#:#User can edit learning progress settings
 rbac#:#sess_edit_learning_progress#:#User can edit learning progress settings
+crs#:#event_user_selection_include_role#:# Include all users with role "%1$s"
+crs#:#event_user_selection_include_waiting_list#:#Include all users on "Waiting List"
+crs#:#event_user_selection_include_requests#:#Include all users on list "Join Requests"
+crs#:#event_user_selection_include_filter#:#Include "%1$s"
+crs#:#event_user_selection#:#Selection of Users
+crs#:#event_tbl_admin#:#Administrator
+crs#:#event_tbl_member#:#Member
+crs#:#event_tbl_tutor#:#Tutor
+news#:#news_sorry_not_accessible_anymore#:#Sorry, this item is not accessible anymore.
+note#:#note_comment_notification_reason#:#You receive this message because your account is listed as a global recipient for all comments in the ILIAS administration (Personal Desktop settings).
+note#:#note_comment_notification_user_has_written#:#%s has written:
+prg#:#prg_show_programmes#:#Visibility
+content#:#cont_not_saved_edit_lock_expired#:#Sorry, but another user obtained the edit lock for this page in the meantime. You may close this message and copy the content to your clipboard.
+content#:#cont_error#:#An Error Occured
+crs#:#crs_mail_context_member_info#:#For the contact emails on the info screen of a course 
+crs#:#crs_mail_context_tutor_info#:#For the participant emails on the member and learning progress screens of a course
+sahs#:#sahs_mail_context_lp_info#:#For the participant emails on the learning progress screens of a scorm module
+style#:#sty_type_ha_iheada#:#Hor. Accordion Header (active)
+style#:#sty_type_ha_ihcap#:#Hor. Accordion Caption
+style#:#sty_type_va_iheada#:#Vert. Accordion Header (active)
+style#:#sty_type_va_ihcap#:#Vert. Accordion Caption
+style#:#sty_ha_iheada_class#:#Hor. Accordion Header (active)
+style#:#sty_ha_ihcap_class#:#Hor. Accordion Caption
+style#:#sty_va_iheada_class#:#Vert. Accordion Header (active)
+style#:#sty_va_ihcap_class#:#Vert. Accordion Caption
+exc#:#exc_delete_team#:#Delete Team

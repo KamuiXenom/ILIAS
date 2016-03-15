@@ -98,7 +98,10 @@ class ilMembershipCronNotifications extends ilCronJob
 							$user_id);
 						if($user_news)
 						{
-							$user_news_aggr[$user_id][$ref_id] = $user_news;								
+							$user_news_aggr[$user_id][$ref_id] = $user_news;		
+							
+							// #17928
+							ilCronManager::ping($this->getId());
 						}
 					}
 				}				
@@ -117,6 +120,9 @@ class ilMembershipCronNotifications extends ilCronJob
 				foreach($user_news_aggr as $user_id => $user_news)
 				{
 					$this->sendMail($user_id, $user_news, $last_run);
+					
+					// #17928
+					ilCronManager::ping($this->getId());
 				}
 			
 				// mails were sent - set cron job status accordingly
@@ -210,7 +216,9 @@ class ilMembershipCronNotifications extends ilCronJob
 		);			
 		
 		$title = trim($title);
-		$content = trim($content);
+		
+		// #18067
+		$content = ilUtil::shortenText(trim($content), 200, true);
 		
 		$res = "";
 		switch($item_obj_type)

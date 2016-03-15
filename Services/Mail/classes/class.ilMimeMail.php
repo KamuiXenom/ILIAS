@@ -321,76 +321,98 @@ class ilMimeMail
 	function BuildMail()
 	{
 		/**
-		 * @var $ilUser ilObjUser
+		 * @var $ilUser          ilObjUser
+		 * @var $ilSetting       ilSetting
+		 * @var $ilClientIniFile ilIniFile
 		 */
-		global $ilUser;
+		global $ilUser, $ilSetting, $ilClientIniFile;
 
 		require_once './Services/Mail/phpmailer/class.phpmailer.php';
 		$mail = new PHPMailer();
 
-		/** @var ilIniFile $ilClientIniFile */
-		global $ilClientIniFile;
-		$style = $ilClientIniFile->readVariable('layout', 'style');
-
-		$bracket_path = './Services/Mail/templates/default/tpl.html_mail_template.html';
-
-		if($style != 'delos')
+		$mail->SetFrom($this->xheaders['From'], $this->xheaders['FromName']);
+		foreach($this->sendto as $recipients)
 		{
-			$tplpath = './Customizing/global/skin/'.$style.'/Services/Mail/tpl.html_mail_template.html';
-
-			if(@file_exists($tplpath))
+			$recipient_pieces = array_filter(array_map('trim', explode(',', $recipients)));
+			foreach($recipient_pieces as $recipient)
 			{
-				$bracket_path = './Customizing/global/skin/'.$style.'/Services/Mail/tpl.html_mail_template.html';
+				$mail->AddAddress($recipient, '');
 			}
 		}
-		$bracket = file_get_contents($bracket_path);
 
-		$mail->SetFrom($this->xheaders['From'], $this->xheaders['FromName']);
-		foreach($this->sendto as $recipient)
+		foreach($this->acc as $carbon_copies)
 		{
-			$mail->AddAddress($recipient, '');
+			$cc_pieces = array_filter(array_map('trim', explode(',', $carbon_copies)));
+			foreach($cc_pieces as $carbon_copy)
+			{
+				$mail->AddCC($carbon_copy, '');
+			}
 		}
-		foreach($this->acc as $carbon_copy)
+
+		foreach($this->abcc as $blind_carbon_copies)
 		{
-			$mail->AddCC($carbon_copy, '');
+			$bcc_pieces = array_filter(array_map('trim', explode(',', $blind_carbon_copies)));
+			foreach($bcc_pieces as $blind_carbon_copy)
+			{
+				$mail->AddBCC($blind_carbon_copy, '');
+			}
 		}
-		foreach($this->abcc as $blind_carbon_copy)
-		{
-			$mail->AddBCC($blind_carbon_copy, '');
-		}
+
 		$mail->CharSet = 'utf-8';
 		$mail->Subject = $this->xheaders['Subject'];
 
-		$directory = './Services/Mail/templates/default/img/';
-
-		if($style != 'delos')
+		if($ilSetting->get('mail_send_html', 0))
 		{
-			$directory = './Customizing/global/skin/'.$style.'/Services/Mail/img/';
-		}
+			$mail->IsHTML(true);
 
-		if(!$this->body)
-		{
-			$this->body  = ' ';
-		}
+			$style = $ilClientIniFile->readVariable('layout', 'style');
 
-		$mail->Body    = str_replace( '{PLACEHOLDER}', nl2br( ilUtil::makeClickable( $this->body ) ), $bracket );
-		$mail->AltBody = $this->body;
-
-		$directory_handle  = @opendir($directory);
-		$files = array();
-		if($directory_handle)
-		{
-			while ($filename = @readdir($directory_handle))
+			$bracket_path = './Services/Mail/templates/default/tpl.html_mail_template.html';
+			if($style != 'delos')
 			{
-				$files[] = $filename;
+				$tplpath = './Customizing/global/skin/' . $style . '/Services/Mail/tpl.html_mail_template.html';
+
+				if(@file_exists($tplpath))
+				{
+					$bracket_path = './Customizing/global/skin/' . $style . '/Services/Mail/tpl.html_mail_template.html';
+				}
+			}
+			$bracket = file_get_contents($bracket_path);
+
+			if(!$this->body)
+			{
+				$this->body  = ' ';
 			}
 
-			$images = preg_grep ('/\.jpg$/i', $files);
+			$mail->AltBody = $this->body;
+			$mail->Body    = str_replace( '{PLACEHOLDER}', nl2br( ilUtil::makeClickable( $this->body ) ), $bracket );
 
-			foreach($images as $image)
+			$directory = './Services/Mail/templates/default/img/';
+			if($style != 'delos')
 			{
-				$mail->AddEmbeddedImage($directory.$image, 'img/'.$image, $image);
+				$directory = './Customizing/global/skin/' . $style . '/Services/Mail/img/';
 			}
+			$directory_handle  = @opendir($directory);
+			$files = array();
+			if($directory_handle)
+			{
+				while ($filename = @readdir($directory_handle))
+				{
+					$files[] = $filename;
+				}
+
+				$images = preg_grep ('/\.jpg$/i', $files);
+
+				foreach($images as $image)
+				{
+					$mail->AddEmbeddedImage($directory.$image, 'img/'.$image, $image);
+				}
+			}
+		}
+		else
+		{
+			$mail->IsHTML(false);
+			$mail->Body = $this->body;
 		}
 
 		$i = 0;
@@ -407,7 +429,7 @@ class ilMimeMail
 		}
 
 		ilLoggerFactory::getLogger('mail')->debug(sprintf(
-			"Trying to delegate external external email delivery:" .
+			"Trying to delegate external email delivery:" .
 			" Initiated by: " . $ilUser->getLogin() . " (" . $ilUser->getId() . ")" .
 			" | From: " . $this->xheaders['From'] .
 			" | To: " . implode(', ', $this->sendto) .
@@ -427,7 +449,7 @@ class ilMimeMail
 		else
 		{
 			ilLoggerFactory::getLogger('mail')->debug(sprintf(
-				'Could not deliver external email: ', $mail->ErrorInfo
+				'Could not deliver external email: %s', $mail->ErrorInfo
 			));
 		}
 	}

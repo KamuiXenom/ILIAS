@@ -353,9 +353,9 @@ assessment#:#tst_pass_overview_header_lo_initial_per_objective#:#Einstiegstester
 assessment#:#tst_pass_overview_header_lo_qualifying_all_objectives#:#Qualifizierende Testergebnisse<br />zu den Lernzielen im Kurs %s
 assessment#:#tst_pass_overview_header_lo_qualifying_per_objective#:#Qualifizierende Testergebnisse<br />zum Lernziel %s im Kurs %s
 assessment#:#tst_pass_details_header_lo_initial#:#Einstiegsergebnisse zu den Lernzielen<br />%s - %s
-assessment#:#tst_virtual_pass_header_lo_initial#:#Einstiegsergebnisse zu den Lernzielen<br />%s
+assessment#:#tst_virtual_pass_header_lo_initial#:#Einstiegsergebnisse zum Lernziel<br />%s
 assessment#:#tst_pass_details_header_lo_qualifying#:#Qualifizierende Ergebnisse zu den Lernzielen<br />%s - %s
-assessment#:#tst_virtual_pass_header_lo_qualifying#:#Qualifizierende Ergebnisse zu den Lernzielen<br />%s
+assessment#:#tst_virtual_pass_header_lo_qualifying#:#Qualifizierende Ergebnisse zum Lernziel<br />%s
 assessment#:#ass_completion_by_submission#:#Bestehen durch Abgabe
 assessment#:#ass_completion_by_submission_info#:#Falls aktiviert, führt die Abgabe einer Lösungsdatei zur Vergabe der Maximalpunktzahl für diese Frage. Die Bewertung kann jederzeit manuell angepasst werden. Das Ändern dieser Einstellung hat keine nachträglichen Auswirkungen auf bereits eingereichte Lösungen.
 assessment#:#ass_create_export_file#:#Erstelle Exportdatei
@@ -365,6 +365,8 @@ assessment#:#ass_export_files#:#Exportdateien
 assessment#:#ass_file#:#Datei
 assessment#:#ass_question#:#Frage
 assessment#:#ass_size#:#Größe
+assessment#:#tst_objectives_progress_header#:#Fortschritte in den Lernzielen
+assessment#:#tst_objective_progress_header#:#Fortschritt im Lernziel
 assessment#:#assClozeTest#:#Lückentextfrage
 assessment#:#assErrorText#:#Fehler/Worte markieren
 assessment#:#assessment_eval_settings#:#Die folgenden Datenfelder in der Auswertung für alle Benutzer anzeigen
@@ -1702,7 +1704,7 @@ assessment#:#tst_question_feedback_back_to_feedback_form#:#Zurück zur aufrufend
 assessment#:#enable_examview#:#Übersicht gegebener Antworten
 assessment#:#enable_examview_desc#:#Teilnehmern werden alle Fragen und die von ihnen gegebenen Antworten vor Abgabe des Tests präsentiert.
 assessment#:#test_enable_archiving#:#Archivierung aktivieren
-assessment#:#test_enable_archiving_desc#:#Im Reiter 'Export' kann der gesamte Test mit allen zugehörigen Teilnehmerantworten exportiert und herunterladen werden.
+assessment#:#test_enable_archiving_desc#:#Im Reiter 'Export' kann der gesamte Test mit allen zugehörigen Teilnehmerantworten exportiert und herunterladen werden. Die Archivdateien werden bei der Testabgabe generiert und bei jeder Änderung der Auswertung vollständig aktualisiert. Das kann zu Verzögerungen und hoher Serverlast führen.
 assessment#:#ass_create_archive_export#:#Archivexport erzeugen.
 assessment#:#cannot_export_archive#:#Archivexport kann nicht erzeugt werden.
 assessment#:#show_examview_html#:#Am Bildschirm
@@ -4026,7 +4028,8 @@ common#:#message_content#:#Inhalt
 common#:#message_no_delivered_files#:#Sie haben noch keine Datei abgegeben.
 common#:#message_to#:#Mail an:
 common#:#meta_data#:#Metadaten
-common#:#mgs_objects_linked_to_the_following_folders#:#Objekte wurden in folgende Bereiche verknüpft: %s
+common#:#mgs_objects_linked_to_the_following_folders_p#:#Die Objekte wurden in folgende Bereiche verknüpft: %s
+common#:#mgs_objects_linked_to_the_following_folders_s#:#Das Objekt wurde in folgende Bereiche verknüpft: %s
 common#:#migrate#:#Migrieren
 common#:#min_time#:#Mindestzeit
 common#:#minute#:#Minute
@@ -4107,7 +4110,8 @@ common#:#msg_input_is_required#:#Hier ist eine Angabe erforderlich. Bitte geben 
 common#:#msg_invalid_filetype#:#Ungültiger Dateityp
 common#:#msg_is_last_role#:#Sie haben den folgenden Benutzern ihre letzte Zuweisung zu einer globalen Rolle genommen
 common#:#msg_last_role_for_registration#:#Es muss mindestens eine Rolle im Registrierformular für neue Benutzer verfügbar sein. Diese Rolle ist momentan als einzige Rolle verfügbar.
-common#:#msg_link_clipboard#:#Wählen Sie nun den gewünschten Ort, in den die ausgewählten Objekte verknüpft werden sollen. Klicken Sie abschließend auf den Einfügen-Button.
+common#:#msg_link_clipboard_p#:#Wählen Sie nun den gewünschten Ort, in den die ausgewählten Objekte verknüpft werden sollen. Klicken Sie abschließend auf den Einfügen-Button.
+common#:#msg_link_clipboard_s#:#Wählen Sie nun den gewünschten Ort, in den das ausgewählte Objekt verknüpft werden sollen. Klicken Sie abschließend auf den Einfügen-Button.
 common#:#msg_linked#:#Objekt(e) verknüpft
 common#:#msg_may_not_contain#:#Dieses Objekt darf keine Objekte des folgenden Typs beinhalten:
 common#:#msg_min_one_active_role#:#Jeder Benutzer muss mindestens einer aktiven globalen Rollen zugewiesen sein!
@@ -7063,7 +7067,6 @@ crs#:#event_location#:#Ort
 crs#:#event_materials#:#Materialien zur Sitzung
 crs#:#event_not_participated#:#Nicht teilgenommen
 crs#:#event_overview#:#Teilnahme an Sitzungen
-crs#:#event_participant_selection#:#Teilnehmerauswahl
 crs#:#event_participated#:#Teilgenommen
 crs#:#event_participation#:#Teilnahme
 crs#:#event_register#:#Anmelden
@@ -7077,12 +7080,9 @@ crs#:#event_select_one#:#-- Bitte wählen Sie eine Sitzung zum Kopieren aus --
 crs#:#event_start_date#:#Start
 crs#:#event_table_create#:#Neue Sitzung
 crs#:#event_table_update#:#Sitzung bearbeiten
-crs#:#event_tbl_admins#:#Administratoren
-crs#:#event_tbl_members#:#Mitglieder
 crs#:#event_tbl_participants#:#Teilnehmer der Sitzung
 crs#:#event_tbl_participated#:#Teilgenommen
 crs#:#event_tbl_registered#:#Angemeldet
-crs#:#event_tbl_tutors#:#Tutoren
 crs#:#event_time#:#Uhrzeit
 crs#:#event_title#:#Titel
 crs#:#event_tutor_data#:#Persönliche Daten des/der Vortragenden
@@ -7788,7 +7788,7 @@ exc#:#exc_msg_new_feedback_file_uploaded2#:#Eine neue Feedback-Datei wurde für 
 exc#:#exc_msg_participants_removed#:#Die Teilnehmer wurden aus der Übung entfernt.
 exc#:#exc_msg_public_submission#:#Alle Lösungsabgaben werden nach dem Abgabetermin veröffentlicht.
 exc#:#exc_msg_saved_grades#:#Note(n)/Kommentar(e) für Lerner wurden gespeichert.
-exc#:#exc_msg_sure_to_deassign_participant#:#Wollen Sie wirklich die folgenden Teilnehmer aus der Übung entfernen? Alle Lösungsabgaben der Teilnehmer werden gelöscht.
+exc#:#exc_msg_sure_to_deassign_participant#:#Wollen Sie wirklich die folgenden Teilnehmer aus allen Übungseinheiten der Übung entfernen? Alle Lösungsabgaben aus allen Übungseinheiten der Teilnehmer werden gelöscht.
 exc#:#exc_new_assignment#:#Neue Übungseinheit
 exc#:#exc_no_assignments_available#:#Keine Übungseinheiten vorhanden. Bitte wählen Sie "Übungseinheiten" und "Bearbeiten", um eine Übungseinheit zu erstellen.
 exc#:#exc_no_participants#:#Zur Zeit gibt es keine Teilnehmer.
@@ -8374,6 +8374,8 @@ mail#:#goto_invitation_chat#:#Öffne Chatraum
 mail#:#info_mail_external_sender_noreply#:#Tragen Sie hier die E-Mail-Adresse ein, die als Absender für automatisch generierte System- oder Benachrichtigungsmails verwendet werden soll. <b>Hinweis</b>: Diese Adresse muss tatsächlich existieren, damit entsprechende Mails nicht von Spam-Filtern und Mail-Servern abgelehnt werden.
 mail#:#invite_to_chat#:#in Chat einladen
 mail#:#linebreak#:#Zeilenumbruch
+mail#:#mail_send_html#:#HTML-Rahmen für externe E-Mails
+mail#:#mail_send_html_info#:#Falls aktiviert, wird der Nachrichtentext von externen E-Mails in einen HTML-Rahmen gesetzt. Dieser kann über ein Skin-Template unter './Customizing/global/skin/[SKIN]/Services/Mail/tpl.html_mail_template.html' (als Kopie von './Services/Mail/templates/default/tpl.html_mail_template.html') angepasst werden. 
 mail#:#mail_account_mail#:#Benutzerkonten-Mail
 mail#:#mail_account_mail_check#:#Benutzerkonten-Mail versenden
 mail#:#mail_add_recipient#:#Bitte geben Sie einen Empfänger ein
@@ -10985,8 +10987,8 @@ style#:#sty_list_char#:#Liste
 style#:#sty_list_style_image#:#Bild
 style#:#sty_list_style_position#:#Position
 style#:#sty_list_style_type#:#Listenstyle
-style#:#sty_make_global_default#:#Voreingestellter Style für neue Objekte
-style#:#sty_make_global_fixed#:#Erzwungener Style für neue Objekte
+style#:#sty_make_global_default#:#Standard-Style
+style#:#sty_make_global_fixed#:#Erzwungener Style für alle Objekte
 style#:#sty_margin#:#Außenrand
 style#:#sty_margin_and_padding#:#Außenrand und Innenabstand
 style#:#sty_media_char#:#Medien
@@ -11142,12 +11144,12 @@ style#:#sty_type_text_inline#:#Zeichen
 style#:#sty_type_va_cntr#:#Vert. Akkordeon Container
 style#:#sty_type_va_icntr#:#Vert. Akkordeonelement Container
 style#:#sty_type_va_icont#:#Vert. Akkordeonelement Inhalt
-style#:#sty_type_va_ihead#:#Vert. Akkordeonelement Überschrift
+style#:#sty_type_va_ihead#:#Vert. Akkordeonelement Kopf
 style#:#sty_ul#:#Bullet-Liste
 style#:#sty_va_cntr_class#:#Vert. Akkordeon Container
 style#:#sty_va_icntr_class#:#Vert. Akkordeonelement Container
 style#:#sty_va_icont_class#:#Vert. Akkordeonelement Inhalt
-style#:#sty_va_ihead_class#:#Vert. Akkordeonelement Überschrift
+style#:#sty_va_ihead_class#:#Vert. Akkordeonelement Kopf
 style#:#sty_vaccordion_templates#:#Vert. Akkordeon Templates
 style#:#sty_vertical#:#Vertikal
 style#:#sty_vertical_align#:#Vertikale Ausrichtung
@@ -12361,7 +12363,8 @@ wsp#:#wsp_password_for#:#Passwort für
 wsp#:#wsp_password_protected_resource#:#Passwort-geschützte Ressource
 wsp#:#wsp_password_protected_resource_info#:#Für den Zugang zu dieser Ressource benötigen Sie ein Passwort.
 wsp#:#wsp_permission_add_users#:#Benutzer hinzufügen
-wsp#:#wsp_permission_all_info#:#Dieses Objekt ist ohne Registrierung sichtbar.
+wsp#:#wsp_permission_all_info#:#Dieses Objekt ist für alle Benutzer im Internet sichtbar.
+wsp#:#wsp_permission_all_pw_info#:#Nach Eingabe des Passworts ist dieses Objekt für alle Benutzer im Internet sichtbar.
 wsp#:#wsp_permission_registered_info#:#Dieses Objekt ist für alle registrierten Benutzer freigegeben.
 wsp#:#wsp_permission_removed#:#Der Eintrag wurde gelöscht.
 wsp#:#wsp_permissions#:#Freigabe
@@ -14540,7 +14543,7 @@ crs#:#crs_registration_confirmation_info#:#Der Beitritt erfolgt nur, wenn er dur
 crs#:#crs_reg_no_selfreg#:#Kein selbständiger Beitritt
 crs#:#crs_reg_password_info#:#Benutzer müssen dieses Passwort eingeben, um dem Kurs beitreten zu können.
 cat#:#cat_more_translations#:#Weitere Übersetzungen
-content#:#cont_got_lock#:#Diese Seite wurde für Ihre Bearbeitung gesperrt. Bitte geben Sie die Seite nach Ihren Änderungen wieder frei.
+content#:#cont_got_lock_until#:#Diese Seite wurde für Ihre Bearbeitung bis %1 gesperrt. Bitte geben Sie die Seite nach Ihren Änderungen durch klicken auf %2 wieder frei.
 content#:#cont_finish_editing#:#Bearbeitung beenden
 content#:#cont_page_lock_released#:#Die Bearbeitung wurde beendet. Die Seite wurde wieder freigegeben.
 orgu#:#backto_staff#:#Zurück zu Personen
@@ -15556,7 +15559,7 @@ membership#:#mem_force_notification_mode_all#:#Aktiviert für alle Mitglieder (f
 membership#:#mem_force_notification_mode_all_sub_blocked#:#Mitglieder können Benachrichtigungen deaktivieren
 membership#:#mem_force_notification_mode_custom#:#Einstellungen für jedes Mitglied
 common#:#settings_for_all_members#:#Mitglieder werden automatisch benachrichtigt
-common#:#settings_per_users#:#Für jedes Mitglied können individuelle Voreinstellungen getroffen werden
+common#:#settings_per_users#:#Mitglieder werden automatisch benachrichtigt. Für jedes Mitglied kann individuell festgelegt werden, ob es die Benachrichtigung deaktivieren darf.
 forum#:#user_decides_notification#:#Mitglieder müssen Benachrichtigungen selber aktivieren 
 crs#:#crs_intro_course_group_notification_for#:#dies ist die Zusammenfassung der Nachrichten aus Ihren Kursen und Gruppen, für die die automatische Benachrichtigung aktiviert wurde.
 crs#:#crs_intro_course_group_notification_index#:#Es gibt Nachrichten aus folgenden Kursen und Gruppen für den Zeitraum von %1$s bis %2$s:
@@ -15575,7 +15578,7 @@ forum#:#frm_noti_new_post#:#es wurde ein neuer Beitrag im Forum "%1$s" erstellt.
 forum#:#frm_noti_subject_new_post#:#Neuer Beitrag im Forum "%1$s" zum Thema "%2$s"
 forum#:#frm_noti_subject_del_thread#:#Thema "%2$s" im Forum "%1$s" gelöscht
 forum#:#frm_noti_subject_act_post#:#Beitrag im Forum "%1$s" zum Thema "%2$s" gelöscht
-forum#:#frm_noti_subject_answ_post#:#Beitrag im Forum "%1$s" zum Thema "%2$s" gelöscht
+forum#:#frm_noti_subject_answ_post#:#Beitrag im Forum "%1$s" zum Thema "%2$s" beantwortet
 forum#:#frm_noti_subject_upt_post#:#Beitrag im Forum "%1$s" zum Thema "%2$s" geändert
 forum#:#frm_noti_subject_cens_post#:#Beitrag im Forum "%1$s" zum Thema "%2$s" zensiert
 forum#:#frm_noti_subject_uncens_post#:#Zensur aufgehoben für einen Beitrag im Forum "%1$s" zum Thema "%2$s"
@@ -15612,8 +15615,8 @@ exc#:#exc_max_file#:#Maximale Dateianzahl
 exc#:#exc_max_file_info#:#Nach Erreichen des Limits können Teilnehmer keine weiteren Dateien hochladen.
 exc#:#exc_max_file_tgl#:#Uploads begrenzen
 exc#:#exc_max_file_reached#:#Sie können maximal %s Dateien hochladen.
-exc#:#exc_deadline_extended#:#Karenzzeit
-exc#:#exc_deadline_extended_info#:#Im Zeitraum zwischen dem Abgabetermin und dem Ende der Karenzzeit können verspätete Abgaben vorgenommen werden.
+exc#:#exc_deadline_extended#:#Nachfrist
+exc#:#exc_deadline_extended_info#:#Im Zeitraum zwischen dem Abgabetermin und dem Ende der Nachfrist können verspätete Abgaben vorgenommen werden.
 exc#:#exc_late_submission_warning#:#Abgaben nach %s werden als verspätet gekennzeichnet.
 exc#:#exc_late_submission#:#Verspätete Abgabe
 exc#:#exc_adopt_group_teams#:#Teams aus Gruppen bilden
@@ -15621,8 +15624,8 @@ exc#:#exc_adopt_group_teams_no_members#:#Keine Mitglieder
 exc#:#exc_adopt_group_teams_conflict#:#Benutzer "%1$s" ist bereits in Gruppe "%2$s" gewählt.
 exc#:#exc_adopt_group_teams_added#:#%s Benutzer wurden hinzugefügt.
 exc#:#exc_adopt_group_teams_blocked#:#%s Benutzer waren bereits vorhanden.
-exc#:#exc_deadline_ext_mismatch#:#Die Karenzzeit muss nach dem Abgabetermin enden.
-exc#:#exc_peer_review_ass_setting_info#:#Nachdem der Abgabetermin und ggfs. die Karenzzeit verstrichen sind, können Teilnehmer ihre Arbeitsergebnisse gegenseitig bewerten. Genaue Einstellungen zum Peer-Feedback werden im gleichnamigen Reiter vorgenommen. Der Reiter wird eingeblendet, wenn diese Option aktiviert und gepeichert wurde. 
+exc#:#exc_deadline_ext_mismatch#:#Die Nachfrist muss nach dem Abgabetermin enden.
+exc#:#exc_peer_review_ass_setting_info#:#Nachdem der Abgabetermin und ggfs. die Nachfrist verstrichen sind, können Teilnehmer ihre Arbeitsergebnisse gegenseitig bewerten. Genaue Einstellungen zum Peer-Feedback werden im gleichnamigen Reiter vorgenommen. Der Reiter wird eingeblendet, wenn diese Option aktiviert und gepeichert wurde.
 exc#:#exc_peer_review_min_number#:#Geforderte Anzahl von Feedbacks
 exc#:#exc_peer_review_min_number_info#:#Anzahl von Feedback, die ein Teilnehmer den Peers geben muss. Sollte die Anzahl der geforderten Feedbacks die Anzahl der tatsächlichen Einreichungen übersteigen, wird die geforderte Anzahl automatisch auf die Anzahl der tatsächlichen Einreichungen reduziert.
 exc#:#exc_criteria_catalogues#:#Kriterienkataloge
@@ -15699,7 +15702,7 @@ crs#:#crs_subscription_min_members#:#Minimale Anzahl
 crs#:#crs_subscription_min_members_info#:#Wird die geforderte Mindestanzahl an Mitgliedern nicht erreicht, kann der Kurs nicht stattfinden. Wird die Mindestanzahl bis zum Ende des Beitrittszeitraums bzw. dem spätesten Kursaustritt nicht erreicht, versendet ILIAS eine Mail an jene Kursadministratoren oder -tutoren, für die im Reiter 'Mitglieder' die Option 'Benachrichtigung' aktiviert ist.
 crs#:#crs_waiting_list_autofill#:#Mit automatischem Aufrücken
 crs#:#crs_waiting_list_no_autofill#:#Ohne automatisches Aufrücken
-crs#:#crs_waiting_list_autofill_info#:#Teilnehmer rücken automatisch bei Stornierungen von der Warteliste nach.
+crs#:#crs_waiting_list_autofill_info#:#Teilnehmer rücken automatisch bei Stornierungen von der Warteliste nach. Dies sollte nicht in Verbindung mit dem Beitrittsverfahren "Beitritt nach Bestätigung" benutzt werden, da die Bestätigung so umgangen wird.
 crs#:#crs_cancellation_end#:#Spätester Kursaustritt
 crs#:#crs_period#:#Veranstaltungszeitraum
 crs#:#crs_course_period_not_valid#:#DerKurszeitraum ist nicht gültig.
@@ -15720,12 +15723,12 @@ crs#:#mem_cron_min_members_subject#:#Kurs/Gruppe: Prüfung der minimalen Teilneh
 crs#:#mem_cron_min_members_intro#:#Die folgenden Kurse und Gruppen erreichen aktuell nicht die für sie definierte minimale Teilnehmerzahl.
 grp#:#grp_waiting_list_autofill#:#Mit automatischem Aufrücken
 grp#:#grp_waiting_list_no_autofill#:#Ohne automatisches Aufrücken
-grp#:#grp_waiting_list_autofill_info#:#Teilnehmer rücken automatisch bei Stornierungen von der Warteliste auf.
+grp#:#grp_waiting_list_autofill_info#:#Teilnehmer rücken automatisch bei Stornierungen von der Warteliste auf. Dies sollte nicht in Verbindung mit dem Beitrittsverfahren "Beitritt nach Bestätigung" benutzt werden, da die Bestätigung so umgangen wird.
 sess#:#sess_reg_waiting_list_none#:#Keine
 sess#:#sess_reg_waiting_list_no_autofill#:#Ohne automatisches Aufrücken
 sess#:#sess_reg_waiting_list_no_autofill_info#:#Ist die maximale Teilnehmeranzahl erreicht, können sich weitere Benutzer auf eine Warteliste setzen lassen.
 sess#:#sess_reg_waiting_list_autofill#:#Mit automatischem Aufrücken
-sess#:#sess_reg_waiting_list_autofill_info#:#Teilnehmer rücken automatisch bei Stornierungen von der Warteliste nach.
+sess#:#sess_reg_waiting_list_autofill_info#:#Teilnehmer rücken automatisch bei Stornierungen von der Warteliste nach. Dies sollte nicht in Verbindung mit dem Anmeldeverfahren "Teilnahme beantragen" benutzt werden, da die Bestätigung so umgangen wird.
 grp#:#grp_cancellation_end_info#:#Mitglieder können nur bis zum gesetzten Datum selbständig die Gruppenmitgliedschaft beenden.
 crs#:#crs_cancellation_end_info#:#Mitglieder können nur bis zum gesetzten Datum selbständig die Kursmitgliedschaft beenden.
 crs#:#crs_period_info#:#Information zum Start und Ende der Veranstaltung, die mit dem Kurs unterstützt werden soll.
@@ -15992,7 +15995,7 @@ prg#:#prg_type_msg_error_custom_icon#:#Während des Speicherns des individuellen
 prg#:#prg_type_assign_amd_sets#:#Erweitertes Metadatenset zuweisen
 prg#:#prg_type_available_amd_sets#:#Verfügbare Erweitere Metadatensets
 prg#:#prg_type_edit#:#Typ editieren
-prg#:#prg_type_msg_deleted#:#Typ löschen
+prg#:#prg_type_msg_deleted#:#Typ gelöscht.
 prg#:#prg_type_msg_unable_delete#:#Konnte Typ nicht löschen, da er bei folgenden Studienprogrammen verwendet wird: %s
 prg#:#prg_type_msg_missing_title_default_language#:#Es muss eine Standardsprache und ein Titel für die Standardsprache gesetzt sein.
 prg#:#prg_save_tree_order#:#Reihenfolge des Baums speichern
@@ -16151,3 +16154,29 @@ rbac#:#sess_edit_learning_progress#:#Benutzer kann Lernfortschrittseinstellungen
 maps#:#maps_custom_tile_server_info#:#Server URL to provide tile-data. Multiple inputs should be separated by spaces. Defaults is "%s".###23 12 2015 new variable
 maps#:#maps_custom_geolocation_server_info#:#Server URL to provide geolocation-data using Nominatim. Your entry should contain the placeholder [QUERY] to define a position for request information. Example: nominatim.example.com/search/[QUERY]?format=json.###23 12 2015 new variable
 maps#:#configure_geolocation#:#Please finish the geolocation configuration in the "Third Party Software" administration menu to enable address search.###23 12 2015 new variable
+crs#:#event_user_selection_include_role#:#Binde alle Benutzer der Rolle "%1$s" ein
+crs#:#event_user_selection_include_waiting_list#:#Binde alle Benutzer der "Warteliste" ein
+crs#:#event_user_selection_include_requests#:#Binde alle Benutzer der Liste "Aufnahmeanträge" ein
+crs#:#event_user_selection_include_filter#:#Binde "%1$s" ein
+crs#:#event_user_selection#:#Auswahl von Benutzern
+crs#:#event_tbl_tutor#:#Tutor
+crs#:#event_tbl_admin#:#Administrator
+crs#:#event_tbl_member#:#Mitglied
+news#:#news_sorry_not_accessible_anymore#:#Entschuldigung, dieses Objekt befindet sich nicht mehr in Ihrem Zugriff.
+note#:#note_comment_notification_reason#:#Sie erhalten diese Nachricht, da ihr Account als Empfänger für alle Kommentare in der ILIAS Adminstration gepflegt ist (Einstellungen Persönlicher Schreibtisch).
+note#:#note_comment_notification_user_has_written#:#%s hat geschrieben:
+prg#:#prg_show_programmes#:#Anzeigen
+content#:#cont_not_saved_edit_lock_expired#:#Entschuldigung, Ihre Änderungen konnten nicht gespeichert werden. Die Seite wurde zwischenzeitlich von einem anderen Benutzer zur Bearbeitung gesperrt. Sie können diesen Dialog schließen und dann den Inhalt in Ihre Zwischenablage kopieren.
+content#:#cont_error#:#Es ist leider ein Fehler aufgetreten
+crs#:#crs_mail_context_member_info#:#Für die Kontakt-Emails auf der Infoseite eines Kurses 
+crs#:#crs_mail_context_tutor_info#:#Für die Teilnehmer-Emails auf den Mitglieds- und Lernfortschrittsansichten eines Kurses
+sahs#:#sahs_mail_context_lp_info#:#Für die Teilnehmer-Emails auf den Lernfortschrittsansichten eines SCORM-Moduls
+style#:#sty_type_ha_iheada#:#Hor. Akkordeonelement Kopf (aktiv)
+style#:#sty_type_ha_ihcap#:#Hor. Akkordeonelement Überschrift
+style#:#sty_type_va_iheada#:#Vert. Akkordeonelement Kopf (aktiv)
+style#:#sty_type_va_ihcap#:#Vert. Akkordeonelement Überschrift
+style#:#sty_ha_iheada_class#:#Hor. Akkordeonelement Kopf (aktiv)
+style#:#sty_ha_ihcap_class#:#Hor. Akkordeonelement Überschrift
+style#:#sty_va_iheada_class#:#Vert. Akkordeonelement Kopf (aktiv)
+style#:#sty_va_ihcap_class#:#Vert. Akkordeonelement Überschrift
+exc#:#exc_delete_team#:#Team löschen

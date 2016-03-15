@@ -312,7 +312,7 @@ abstract class ilTestOutputGUI extends ilTestPlayerAbstractGUI
 			$objectivesAdapter->buildQuestionRelatedObjectiveList($this->testSequence, $this->questionRelatedObjectivesList);
 			$this->questionRelatedObjectivesList->loadObjectivesTitles();
 
-			$objectivesString = $this->questionRelatedObjectivesList->getQuestionRelatedObjectiveTitle($questionId);
+			$objectivesString = $this->questionRelatedObjectivesList->getQuestionRelatedObjectiveTitles($questionId);
 			$headerBlockBuilder->setQuestionRelatedObjectives($objectivesString);
 		}
 		$questionGui->setQuestionHeaderBlockBuilder($headerBlockBuilder);
@@ -324,7 +324,7 @@ abstract class ilTestOutputGUI extends ilTestPlayerAbstractGUI
 
 		$this->ctrl->setParameter($this, 'sequence', $sequenceElement);
 		$this->ctrl->setParameter($this, 'pmode', $presentationMode);
-		$formAction = $this->ctrl->getFormAction($this);
+		$formAction = $this->ctrl->getFormAction($this, ilTestPlayerCommands::SUBMIT_INTERMEDIATE_SOLUTION);
 
 		switch($presentationMode)
 		{
